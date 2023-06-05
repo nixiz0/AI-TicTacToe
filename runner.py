@@ -18,7 +18,7 @@ mediumFont = pygame.font.Font("Merriweather-Black.ttf", 28)
 largeFont = pygame.font.Font("Merriweather-Black.ttf", 40)
 moveFont = pygame.font.Font("Merriweather-Black.ttf", 60)
 
-board = g.initial_state()
+board = g.initial_start()
 user = None
 ai_turn = False
 
@@ -40,14 +40,14 @@ while True:
 
         # Pygame buttons
         playXButton = pygame.Rect((width / 8), (height / 2), width / 4, 50)
-        playX = mediumFont.render("Jouer en tant que X", True, color1)
+        playX = mediumFont.render("Jouer X", True, color1)
         playXRect = playX.get_rect()
         playXRect.center = playXButton.center
         pygame.draw.rect(screen, color2, playXButton)
         screen.blit(playX, playXRect)
 
         playOButton = pygame.Rect(5 * (width / 8), (height / 2), width / 4, 50)
-        playO = mediumFont.render("Jouer en tant que O", True, color1)
+        playO = mediumFont.render("Jouer O", True, color1)
         playORect = playO.get_rect()
         playORect.center = playOButton.center
         pygame.draw.rect(screen, color2, playOButton)
@@ -139,7 +139,7 @@ while True:
                 if againButton.collidepoint(mouse):
                     time.sleep(0.2)
                     user = None
-                    board = g.initial_state()
+                    board = g.initial_start()
                     ai_turn = False
 
     pygame.display.flip()
