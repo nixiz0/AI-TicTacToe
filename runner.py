@@ -9,7 +9,7 @@ pygame.init()
 size = width, height = 600, 400
 
 # Colors of the Board
-color1 = (0, 0, 0)
+color1 = (50, 50, 50)
 color2 = (255, 255, 255)
 
 screen = pygame.display.set_mode(size)
