@@ -13,7 +13,6 @@ To run this project you must have the pygame library in your virtual environment
 
 - Place your terminal in the game folder
 - Type 'python runner.py'
-Enjoy ! :D
 
 ## Author
 
